@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>País</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+  <ion-item>
+    <ion-label>Universidad</ion-label>
+    <ion-input [(ngModel)]= "country" placeholder="Inserte un nombre"></ion-input>
+  </ion-item>
+
+  <ion-button shape="round" (click)="Country()">Generar</ion-button>
+    <ion-list>
+    </ion-list>
+    <ion-item *ngFor="let item of result">
+      <ion-label>
+        <ion-label><p>Nombre:</p>{{item.name}}</ion-label>
+        <ion-label ><p>Nombre:</p>{{item.domains}}</ion-label>
+        <ion-label><p>Link:</p>{{item.web_pages}}</ion-label>
+      </ion-label>
+    </ion-item>
+ 
+</ion-content>
